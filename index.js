@@ -11,8 +11,8 @@ const {
 } = constants
 
 const options = {
-  key: readFileSync('./pems/localhost-privkey.pem'),
-  cert: readFileSync('./pems/localhost-cert.pem'),
+  key: readFileSync('./pems/  localhost-privkey.pem'),
+  cert: readFileSync('./pems/ localhost-cert.pem'),
   allowHTTP1: true
 }
 
@@ -46,4 +46,4 @@ server.on('stream', ({ end, respond, respondWithFile }, headers) => {
   { statCheck, onError })
 })
 
-server.listen(8843)
+server.listen(443)

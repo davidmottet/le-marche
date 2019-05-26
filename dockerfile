@@ -2,10 +2,16 @@ FROM node:carbon-alpine
 
 WORKDIR /app
 
-RUN apk --no-cache add git
-
 COPY package.json ./
+
+RUN npm i -g nodemon
 
 RUN npm i
 
 COPY . .
+
+EXPOSE 80
+
+EXPOSE 443
+
+CMD [ "npm", "run", "dev" ]
