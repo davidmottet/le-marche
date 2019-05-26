@@ -11,8 +11,8 @@ const {
 } = constants
 
 const options = {
-  key: readFileSync('./localhost-privkey.pem'),
-  cert: readFileSync('./localhost-cert.pem'),
+  key: readFileSync('./pems/localhost-privkey.pem'),
+  cert: readFileSync('./pems/localhost-cert.pem'),
   allowHTTP1: true
 }
 
