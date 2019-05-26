@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "dev": "nodeamon index.js"
+    "dev": "nodemon index.js"
   },
   "repository": {
     "type": "git",
@@ -16,5 +16,11 @@
   "bugs": {
     "url": "https://github.com/davidmottet/le-marche/issues"
   },
-  "homepage": "https://github.com/davidmottet/le-marche#readme"
+  "homepage": "https://github.com/davidmottet/le-marche#readme",
+  "dependencies": {
+    "mime-types": "^2.1.24"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.1"
+  }
 }
