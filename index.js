@@ -29,10 +29,9 @@ const statCheck = (stat, headers) => {
 
 server.on('stream', ({ end, respond, respondWithFile }, headers) => {
   const reqPath = headers[HTTP2_HEADER_PATH]
-  const reqMethod = headers[HTTP2_HEADER_METHOD]
   const pathFile = join(serverRoot, reqPath)
 
-  const onError = ({ code )} => {
+  const onError = ({ code }) => {
     if (code === 'ENOENT') {
       respond({ ':status': HTTP_STATUS_NOT_FOUND })
     } else {
